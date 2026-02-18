@@ -1,75 +1,43 @@
 **React Custom Form Validation**
+A compact React project demonstrating custom form validation patterns using controlled and uncontrolled inputs, custom hooks, and SCSS modules.
+**Demo**
+[View the live app](https://react-custom-form-validation-nv.netlify.app/)
 
-An example of custom form validation in React implemented without external form libraries.
+## Features
+- Controlled & uncontrolled form inputs
+- Custom validation hooks (`useInput`, `useValidation`)
+- Reusable form UI components (`Input`, `Button`, `Checkbox`)
+- Responsive styling with SCSS modules
 
-**Live Demo**
-[View the live app](https://.netlify.app/)
+## Tech Stack
+- React (functional components, hooks)
+- Create React App (CRA)
+- react-hook-form (light usage)
+- Sass (SCSS modules)
+- JavaScript (ES6+)
 
-**Description**
+## Quick Start
+```bash
+# Clone repo
+git clone <your-repo-url>
+cd react-custom-form-validation
 
-This project demonstrates how to validate form fields such as email, password, and confirm password using custom logic with React hooks and JavaScript.
-No external form libraries like react-hook-form, yup, or zod are used.
-
-**Technologies**
-
-React 19.x
-JavaScript (ES6+)
-SCSS
-
-**Features**
-Required field validation
-Email format validation
-Password length validation
-Password match (confirm password)
-Real-time error display
-Submit button disabled until the form is valid
-
-**Vite or Create React App**
-Getting Started
-
-**Clone the repository:**
-git clone https://github.com/NataliiaVareniuk/Foxminded-React2026
-
-**Navigate to the project folder:**
-cd Foxminded-React2026/react-custom-form-validation
-
-**Install dependencies:**
-
+# Install dependencies
 npm install
-
-**Start the development server:**
+# Run development server
 npm start
-The app will open in your browser, usually at http://localhost:3000
-
-**Form validation uses:**
-
-Custom validation functions
-React state to store errors
-Event handlers (onChange, onBlur)
-
-**Purpose**
-
-This project demonstrates practical approaches to:
-
-Implementing form validation without libraries
-Separating validation logic from UI
-Managing error state
-Improving user experience with real-time feedback
-
-**Possible Improvements**
-
-Integration with react-hook-form
-Schema-based validation (yup, zod)
-Unit and integration tests
-More complex forms (multi-step, dynamic fields)
+# Build for production
+npm run build
 
 **Project Structure**
 src/
-├── components/ # Form components
-├── hooks/ # Custom hooks for validation
-├── styles/ # CSS / SCSS
-├── utils/ # Utility functions
-└── App.jsx
+├── components/     # Reusable UI components
+├── ui/             # Buttons, Inputs, Checkboxes
+├── Main/           # Demo pages
+├── utils/          # Custom hooks (useInput, useValidation)
+├── assets/         # Images, SCSS globals
 
 **License**
 Educational project, free to use and modify.
+```
+
