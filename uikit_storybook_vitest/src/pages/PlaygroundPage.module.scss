@@ -1,0 +1,23 @@
+.mainContainer {
+  background-color: var(--main-background);
+  height: 100%;
+  padding: var(--containerPadding);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px 42px;
+  overflow: auto;
+}
+
+.mainGroup {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 16px;
+}
+.mainGroupLink {
+  @extend .mainGroup;
+  row-gap: 42px;
+}

@@ -1,0 +1,23 @@
+.formToDo {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  column-gap: 16px;
+  margin-bottom: 2px;
+  border-radius: var(--radius-base) var(--radius-base) 0 0;
+}
+
+.input {
+  outline: none;
+  padding-inline: 16px;
+  font-family: var(--font-base);
+  caret-color: var(--color-text-primary);
+}
+
+.error {
+  &::placeholder {
+    color: var(--color-attention);
+  }
+}

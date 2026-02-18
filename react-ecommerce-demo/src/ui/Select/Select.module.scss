@@ -1,0 +1,78 @@
+.selectField {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  margin-bottom: 2px;
+}
+.label {
+  color: var(--text-default);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
+.select {
+  border-bottom: 1px solid var(--underline-default);
+  padding-bottom: 13px;
+  width: 250px;
+  flex-shrink: 0;
+  outline: none;
+  color: var(--text-default);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.333333;
+  letter-spacing: -0.3px;
+
+  &::placeholder {
+    opacity: 0.8;
+    color: var(--text-default);
+    &:active {
+      opacity: 1;
+    }
+  }
+  &:focus,
+  &:active {
+    border-color: var(--text-default);
+  }
+  &:focus::placeholder {
+    opacity: 1;
+  }
+}
+
+
+.selectError {
+  @extend .select;
+  border-color: var(--underline-error);
+  &::placeholder {
+    color: var(--text-default);
+    opacity: 1;
+  }
+  &:focus,
+  &:active {
+    border-color: var(--underline-error);
+  }
+}
+.error {
+  color: var(--underline-error);
+  border-color: var(--underline-error);
+  font-size: 10px;
+  text-align: left;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  transition: opacity var(--transition-speed) ease;
+  opacity: 0;
+}
+.errorVisible {
+  @extend .error;
+  opacity: 1;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.field {
+  display: inline-flex;
+  flex-direction: column;
+}

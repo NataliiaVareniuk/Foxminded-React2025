@@ -1,0 +1,66 @@
+.cardContainer {
+  display: grid;
+  grid-template-rows: auto;
+
+  max-width: 240px;
+  padding: 8px;
+  gap: 16px;
+  background-color: var(--white-text);
+  color: var(--dark-text);
+
+  border-radius: var(--border-radius);
+
+  box-shadow: var(--shadow-hover);
+}
+.productsContainer {
+  display: flex;
+  margin: auto;
+  height: 100%;
+  padding-block: 33px 70px;
+  max-width: var(--containerWidth);
+  justify-content: center;
+  align-items: center;
+
+  padding-inline: var(--containerPadding);
+}
+.image {
+  width: 224px;
+  height: 245px;
+  flex-shrink: 0;
+  aspect-ratio: 224/245;
+  object-fit: contain;
+}
+.cardDescription {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: start;
+  height: 40px;
+}
+.cardPrice {
+  text-align: start;
+
+  overflow: hidden;
+  color: var(--dark-text);
+
+  text-overflow: ellipsis;
+
+  font-size: 24px;
+
+  font-weight: 400;
+  line-height: 0.8333;
+}
+
+.productList {
+  display: flex;
+  gap: 32px 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+  }
+}

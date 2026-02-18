@@ -1,0 +1,76 @@
+.dropdown {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  min-width: 80px;
+}
+.dropdownButton {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  min-width: 80px;
+
+  height: 36px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+
+  border: 1px solid var(--secondary-color, var(--secondary-grey));
+  background-color: var(--main-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-button, var(--shadow));
+
+  &:hover {
+    background-color: var(--hover-color, var(--hover-grey));
+    box-shadow: var(--secondary-shadow);
+  }
+  &:active,
+  &:focus {
+    border: 1px solid var(--secondary-color, var(--secondary-grey));
+    background-color: var(--pressed-color, var(--pressed-grey));
+  }
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-secondary, var(--border-grey-secondary));
+  background-color: var(--main-background);
+  box-shadow: var(--shadow-content, var(--time-shadow));
+}
+.dropdownItem {
+  color: var(--text-default);
+  font-size: var(--font-size, var(--font-size-m));
+
+  line-height: 1.33333;
+  letter-spacing: -0.3px;
+  width: 100%;
+  height: 36px;
+  padding: 13px 8px 12px 8px;
+
+  align-items: center;
+  display: flex;
+  transition: all var(--transition-speed) ease;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  &:hover {
+    background-color: var(--hovered, var(--hovered-time));
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    background-color: var(--selected, var(--selection-time));
+  }
+}
+
+.active,
+.selected {
+  background-color: var(--selected, var(--selection-time));
+}

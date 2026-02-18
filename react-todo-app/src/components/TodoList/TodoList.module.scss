@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+
+  align-items: stretch;
+}
+
+.listToDo {
+  padding: var(--layout-container-padding);
+  padding-top: 16px;
+  border-radius: 0 0 var(--radius-base) var(--radius-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  width: 100%;
+  max-height: calc(100vh - 130px);
+  background-color: var(--color-bg-main);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: y mandatory;
+
+  margin: 0 auto;
+
+  max-width: calc(
+    var(--layout-content-max-width) + 2 * var(--layout-container-padding)
+  );
+  box-shadow: var(--shadow-base);
+}
+.item {
+  margin-bottom: 16px;
+}
+
+.buttonClear {
+  flex: 0 0 auto;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}

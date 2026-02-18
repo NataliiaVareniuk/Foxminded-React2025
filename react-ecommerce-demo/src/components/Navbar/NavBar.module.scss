@@ -1,0 +1,107 @@
+.active {
+  color: var(--heading-color);
+}
+
+.link {
+  color: var(--color-surface);
+  margin: 20px;
+}
+
+.nav {
+  max-width: var(--containerWidth);
+  width: 100%;
+  padding-inline: var(--containerPadding);
+}
+
+.navItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.buttonBasket {
+  border-radius: var(--border-radius);
+  width: 100px;
+  max-width: 100px;
+  height: 36px;
+  padding-inline: 10px;
+  padding-block: 12px;
+  background-color: var(--default-color-green);
+  color: var(--white-text);
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+
+  box-shadow: var(--shadow);
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: -0.3px;
+
+  display: inline-flex;
+  z-index: 0;
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  &:hover {
+    border: 1px solid var(--hover-border);
+
+    box-shadow: var(--hover-shadow);
+  }
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background: url("../../assets/images/basket.svg") center/100% no-repeat;
+  }
+}
+
+.count {
+  width: 16px;
+  height: 16px;
+  background-color: var(--card-count);
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: -4px;
+  z-index: 2;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+
+  letter-spacing: -0.3px;
+}
+
+.active {
+  @extend .buttonBasket;
+  background-color: var(--pressed-color);
+}
+
+.buttonLogo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+  color: var(--white-text);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.261px;
+  &::before {
+    content: "";
+    width: 51px;
+    height: 40px;
+    margin-right: 2px;
+    background: url("../../assets/images/Logo.png") center/100% no-repeat;
+  }
+}
+.w100 {
+  --btnWidth: 100px;
+}

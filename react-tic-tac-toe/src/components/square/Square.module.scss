@@ -1,0 +1,33 @@
+.square {
+  width: var(--square-size);
+  height: var(--square-size);
+  background: var(--background-message-field);
+  border: 1px solid var(--border-color-02);
+  &:first-child,
+  &:nth-child(2),
+  &:nth-child(3) {
+    border-top: none;
+  }
+  &:nth-child(3n + 1) {
+    border-left: none;
+  }
+  &:nth-child(3n + 3) {
+    border-right: none;
+  }
+  &:nth-child(7),
+  &:nth-child(8),
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.squareX {
+  @extend .square;
+
+  background: url("../../assets/images/x.svg") center / 70px no-repeat;
+}
+.squareO {
+  @extend .square;
+
+  background: url("../../assets/images/o.svg") center / 70px no-repeat;
+}

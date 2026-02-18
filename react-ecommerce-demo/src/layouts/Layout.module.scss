@@ -1,0 +1,105 @@
+.container {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100dvh;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  color: var(--text-default);
+}
+
+.main {
+  margin: 0 auto;
+}
+.crumbsContainer {
+  margin: 0 auto;
+  padding-top: 30px;
+  display: flex;
+  max-width: var(--containerCart);
+  padding-inline: var(--containerPadding);
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-bottom: 24px;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+
+.crumbsItems {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin crumbsItemMixin {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.261px;
+}
+.crumbsItem {
+  @include crumbsItemMixin;
+}
+
+.crumbsLink {
+  @include crumbsItemMixin;
+  color: var(--text-default);
+  cursor: pointer;
+  pointer-events: all;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.crumbsLinkActive {
+  @include crumbsItemMixin;
+  color: var(--default-color-green);
+  cursor: default;
+  pointer-events: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.disabled {
+  @include crumbsItemMixin;
+  color: var(--text-muted);
+  cursor: default;
+  pointer-events: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.crumbsSplit {
+  width: 11px;
+  height: 12px;
+  margin-inline: 16px;
+  background: url("../assets/images/split.png") center/100% no-repeat;
+}
+.crumbsNav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 10px;
+  }
+}
+.pageTitle {
+  color: var(--contact-information-text);
+  text-align: start;
+  font-size: 32px;
+  letter-spacing: -0.261px;
+
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+}

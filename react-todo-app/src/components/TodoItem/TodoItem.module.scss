@@ -1,0 +1,76 @@
+.itemToDo {
+  width: 100%;
+  border-radius: var(--radius-base);
+  display: grid;
+  align-items: flex-start;
+  column-gap: 16px;
+  grid-template-columns: 16px 2px minmax(180px, 1fr) 16px 16px;
+  padding: 16px;
+  box-shadow: var(--btn-shadow);
+  border: 1px solid var(--color-bg-secondary);
+  min-height: 48px;
+  height: auto;
+  scroll-snap-align: start;
+  margin-bottom: 16px;
+  &:hover {
+    background-color: var(--color-bg-checked);
+
+    .button {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.bgChecked {
+  &:hover {
+    cursor: default;
+  }
+}
+
+.divide {
+  grid-column: 2 / span 1;
+  display: block;
+  width: 2px;
+  background-color: var(--color-bg-secondary);
+  height: 100%;
+  top: 0px;
+  left: -16px;
+  border-radius: 2px;
+}
+
+.inputDone {
+  text-decoration: line-through;
+}
+
+.button {
+  border: none;
+  align-self: start;
+  opacity: 0;
+  transition: opacity var(--transition-time);
+  pointer-events: none;
+
+  &:not(:disabled):hover {
+    transform: scale(1.1);
+    filter: invert(52%) sepia(41%) saturate(6615%) hue-rotate(104deg)
+      brightness(96%) contrast(102%);
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
+.saveButton {
+  grid-column: 5 / span 1;
+  opacity: 1;
+}
+
+.deleteButton {
+  grid-column: 5 / span 1;
+
+  &:not(:disabled):hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(33%) sepia(39%) saturate(3898%)
+      hue-rotate(2deg) brightness(104%) contrast(104%);
+  }
+}

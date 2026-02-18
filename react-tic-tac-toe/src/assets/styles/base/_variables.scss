@@ -1,0 +1,30 @@
+:root {
+  --background-message-opponent: #737373;
+  --background-message: #00ae1c;
+  --background-message-field: #313131;
+  --main-background-color: #222222;
+  --main-background-color02: #171717;
+  --border-color-01: #454545;
+  --border-color-02: #7d7d7d;
+  --background-color: #424242;
+  --border-color-03: #8b8b8b;
+  --orange-title: #ef9919;
+  --text-color: #fff;
+  --lost-color: #ff5620;
+
+  --shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  --mark-size: cal(var(--square-size) * 0.9);
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+  --maxWidth: 1920px;
+  --square-size: 90px;
+    --square-size-padding:105px
+  --containerWidth: 1388px;
+  --containerPadding: 15px;
+ 
+
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #17a2b8;
+}

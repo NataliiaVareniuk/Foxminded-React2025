@@ -1,0 +1,45 @@
+@use 'sass:math' as *;
+
+@use './variables' as *;
+
+@use './reset' as *;
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--color-bg-page);
+  height: 100vh;
+
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  border-radius: var(--radius-base) var(--radius-base) 0 0;
+  padding-block: var(--layout-container-padding);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.container-default {
+  margin: 0 auto;
+  position: relative;
+  background-color: var(--color-bg-main);
+  max-width: calc(
+    var(--layout-content-max-width) + 2 * var(--layout-container-padding)
+  );
+  padding: var(--layout-container-padding);
+  overflow: hidden;
+  box-shadow: var(--shadow-base);
+}
+
+.text-default {
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  line-height: 1.333;
+  letter-spacing: -0.3px;
+}
+.loading {
+}
+.error {
+  color: var(--color-attention);
+}

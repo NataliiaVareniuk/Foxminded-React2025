@@ -1,0 +1,55 @@
+.toast {
+  width: 242px;
+
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  box-shadow: var(--modal-shadow);
+  background-color: var(--main-background);
+  padding: 14px 16px;
+  position: fixed;
+  top: 20px;
+  left: 15px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 8px;
+  align-items: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all var(--transition-speed) ease;
+  &.opening {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  &.closing {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+.toast::-webkit-scrollbar {
+  display: none;
+}
+.messageWrapper {
+  max-height: 52px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.message {
+  color: var(--text-default);
+  font-size: var(--font-size, var(--font-size-m));
+  text-align: start;
+  line-height: 1.66667;
+  letter-spacing: -0.6px;
+}
+.closeButton {
+  width: 16px;
+  height: 16px;
+  background: transparent;
+
+  display: flex;
+  align-content: center;
+  border-radius: var(--border-radius-small);
+  &:hover {
+    background: var(--secondary-color, var(--secondary-grey));
+  }
+}

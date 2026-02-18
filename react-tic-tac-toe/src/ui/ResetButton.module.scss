@@ -1,0 +1,19 @@
+.resetButton {
+  display: inline-flex;
+  height: 36px;
+
+  padding: 12px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: var(--border-radius);
+  background-color: var(--background-message);
+  box-shadow: var(--shadow);
+
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: -0.3px;
+}

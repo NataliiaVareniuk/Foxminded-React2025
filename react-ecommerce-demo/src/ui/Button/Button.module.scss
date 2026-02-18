@@ -1,0 +1,60 @@
+.button {
+  --btnWidth: auto;
+
+  width: var(--btnWidth);
+
+  display: inline-flex;
+  flex: 1 1 auto;
+  height: 36px;
+  padding: 12px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  border-radius: var(--border-radius);
+  background: var(--default-color-green);
+  box-shadow: var(--shadow);
+  color: var(--white-text);
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  border: 1px solid transparent;
+
+  letter-spacing: -0.3px;
+  transition: all var(--transition-speed);
+  &:hover {
+    border-color: var(--hover-border);
+    box-shadow: var(--hover-shadow);
+  }
+  &:active {
+    background-color: var(--pressed-color);
+  }
+  &:disabled {
+    background: var(--disabled-color);
+    cursor: not-allowed;
+    border-color: transparent;
+  }
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.iconSmall {
+  width: 11px;
+  height: 12px;
+}
+
+.w81 {
+  --btnWidth: 81px;
+}
+.w100 {
+  --btnWidth: 100px;
+}
+
+.wBig {
+  --btnWidth: 150px;
+}

@@ -1,0 +1,24 @@
+@use "sass:math";
+@use "./mixins";
+@use "./variables";
+
+@use "./reset";
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--main-background);
+  color: var(--text-default);
+  font-size: 16px;
+  -ms-overflow-style: none;
+}
+
+[class*="__container"] {
+  margin: 0 auto;
+  display: flex;
+
+  max-width: var(--containerCart);
+  padding-inline: var(--containerPadding);
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px 10px;
+}

@@ -1,0 +1,45 @@
+:root {
+  --main-background: #f2f5f7;
+  --header-background: #171717;
+  --default-color-green: #00ae1c;
+  --disabled-color: #187727;
+
+  --hover-border: #5ce171;
+  --contact-information-text: #243573;
+
+  --pressed-color: #0cd52b;
+
+  --underline-default: #737373;
+  --text-default: #243573;
+  --underline-error: #ff5620;
+  --white-text: #ffffff;
+  --dark-text: #0c0c0c;
+  --card-count: #e9ed08;
+  --black-color: #000;
+  --separating-line: #c8c8c8;
+
+  --shadow-hover: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  --shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+
+  --hover-shadow: 0 2px 2px 0 rgba(92, 225, 113, 0.25),
+    0 1px 2px 0 rgba(16, 24, 40, 0.05);
+
+  --selection-color: #b9b9b9;
+
+  --border-radius: 8px;
+
+  --transition-speed: 0.3s;
+  --maxWidth: 1440px;
+  --containerCart: 990px;
+  --containerWidth: 1350px;
+  --containerPadding: 15px;
+
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #17a2b8;
+  --order-small: 465px;
+  --extraSmallDevices: 480px;
+  --smallDevices: 576;
+  --tablets: 768px;
+}

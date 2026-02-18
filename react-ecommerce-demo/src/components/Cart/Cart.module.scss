@@ -1,0 +1,157 @@
+.containerPage {
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--containerCart);
+  padding-inline: var(--containerPadding);
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.containerCartList {
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--containerCart);
+  padding-inline: var(--containerPadding);
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cardItem {
+  color: var(--dark-text);
+  line-height: 1.25;
+  border-radius: var(--border-radius);
+  background: var(--white-text);
+  box-shadow: var(--shadow-hover);
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  gap: 8px;
+  align-items: center;
+}
+.image {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+.cardInfo {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: minmax(0, 700px) auto;
+  width: 100%;
+
+  @media screen and (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cardSummary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.cardDescription {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-height: 70px;
+  max-width: 700px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 8px;
+  text-align: start;
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+    min-height: auto;
+  }
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.count {
+  font-weight: 700;
+}
+
+.editCount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.showPrice {
+  display: grid;
+  grid-template-columns: minmax(91px, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: end;
+  gap: 15px;
+
+  @media screen and (max-width: 576px) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+.priceText {
+  display: flex;
+  align-items: flex-end;
+}
+.cartPrice {
+  display: flex;
+
+  font-size: 24px;
+  line-height: 0.83333;
+  justify-self: start;
+}
+.text {
+  color: var(--text-default);
+  font-size: 20px;
+  letter-spacing: -0.261px;
+}
+.count {
+  @extend .text;
+  font-weight: 700;
+}
+.totalSum {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 16px 49px;
+  justify-items: flex-start;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+.cardItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.nextButton {
+  display: flex;
+  max-width: 150px;
+  margin-bottom: 20px;
+  width: 100%;
+  flex: 1;
+  justify-content: flex-start;
+}
+.wBig {
+  --btnWidth: 150px;
+}
+.w81 {
+  --btnWidth: 81px;
+}

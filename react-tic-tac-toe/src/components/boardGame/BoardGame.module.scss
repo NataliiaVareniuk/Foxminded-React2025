@@ -1,0 +1,44 @@
+.titlePlayer {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  color: var(--orange-title);
+}
+
+.winner {
+  color: var(--background-message);
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+.looser {
+  @extend .winner;
+  color: var(--lost-color);
+}
+.player {
+  padding-top: 37px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  flex-basis: 50%;
+  align-items: center;
+  gap: 38px;
+  padding-inline: 41px;
+  &:first-child {
+    border-right: 2px solid var(--border-color-01);
+  }
+}
+
+.players {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.draw {
+  @extend .winner;
+  color: var(--orange-title);
+}

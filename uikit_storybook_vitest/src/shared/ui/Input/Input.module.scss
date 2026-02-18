@@ -1,0 +1,158 @@
+.inputContainer {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+@mixin baseWrapperInput {
+  display: flex;
+
+  position: relative;
+  align-items: center;
+  padding-bottom: 8px;
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--underline-default);
+  }
+}
+
+.inputWrapper {
+  @include baseWrapperInput;
+}
+.inputWrapperError {
+  @include baseWrapperInput;
+  &::after {
+    background-color: var(--red-error);
+  }
+}
+
+.inputContent {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  margin-bottom: 2px;
+}
+.label {
+  color: var(--text-default);
+  font-size: var(--font-size-first, var(--font-size-xs));
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
+@mixin baseInput {
+  outline: none;
+  border: none;
+  padding: 0;
+
+  color: var(--text-default);
+  font-size: var(--font-size-second, var(--font-size-m));
+  line-height: 1;
+  letter-spacing: -0.3px;
+
+  &:not(:disabled):hover {
+    outline: none;
+    cursor: pointer;
+  }
+  &::placeholder {
+    outline: none;
+    opacity: 0.8;
+    color: var(--text-default);
+  }
+  &:not(:disabled):active::placeholder {
+    outline: none;
+    opacity: 1;
+  }
+  &:not(:disabled):focus,
+  &:not(:disabled):active {
+    outline: none;
+    border-color: var(--text-default);
+  }
+  &:focus::placeholder {
+    outline: none;
+    opacity: 1;
+    background-color: transparent;
+  }
+  &:disabled {
+    color: var(--underline-default);
+    background-color: transparent;
+  }
+}
+.input {
+  @include baseInput;
+  width: var(--input-width);
+}
+
+.inputError {
+  @include baseInput;
+  width: var(--input-width);
+  border-color: var(--red-error);
+  &::placeholder {
+    color: var(--text-default);
+    opacity: 1;
+  }
+}
+.inputError:not(:disabled):focus,
+.inputError:not(:disabled):active {
+  outline: none;
+  border-color: var(--red-error);
+}
+
+.error {
+  color: var(--red-error);
+  font-size: var(--font-size-first, var(--font-size-xs));
+  text-align: left;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  min-height: 12px;
+  transition: opacity var(--transition-speed) ease;
+  opacity: 0;
+}
+
+.errorVisible {
+  @extend .error;
+  opacity: 1;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.buttonClass {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 7px;
+  &:disabled {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(15%) saturate(18%)
+      hue-rotate(350deg) brightness(91%) contrast(98%);
+    cursor: not-allowed;
+  }
+}
+
+.disabled {
+  color: var(--underline-default);
+}
+
+.size_xs {
+  --input-width: var(--input-size-xs);
+}
+.size_s {
+  --input-width: var(--input-size-s);
+}
+.size_m {
+  --input-width: var(--input-size-m);
+}
+.size_l {
+  --input-width: var(--input-size-l);
+}
+.size_xl {
+  --input-width: var(--input-size-xl);
+}

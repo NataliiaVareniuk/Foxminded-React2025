@@ -1,0 +1,25 @@
+@use 'sass:math';
+
+@use './variables';
+
+@use './reset';
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--main-background);
+  color: var(--text-default);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  -ms-overflow-style: none;
+}
+
+[class*='__container'] {
+  margin: 0 auto;
+  display: flex;
+
+  max-width: var(--containerCart);
+  padding-inline: var(--containerPadding);
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px 10px;
+}

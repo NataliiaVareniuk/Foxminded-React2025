@@ -1,0 +1,116 @@
+.datePicker {
+  padding: 14px 8px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--border-radius);
+  background-color: var(--main-background);
+  align-items: center;
+  box-shadow: var(--shadow-hover);
+  max-width: 240px;
+  min-width: 224px;
+  width: 100%;
+}
+
+.currentMonth {
+  color: var(--text-default);
+  font-size: var(--font-size-m);
+
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4667;
+  letter-spacing: -0.3px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 115px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 69px;
+  margin-bottom: 18px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}
+.button {
+  display: flex;
+  background: transparent;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-small);
+  align-content: center;
+  padding: 1px;
+  border: none;
+
+  &:hover {
+    background-color: var(--secondary-color, var(--secondary-grey));
+  }
+}
+.iconRotate {
+  transform: rotate(180deg);
+}
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 24px;
+  place-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.dayOfWeek {
+  color: var(--text-default);
+  text-align: center;
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.83333;
+  padding: 0;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dayOfMonth {
+  width: 24px;
+  height: 24px;
+  color: var(--text-default);
+  font-size: var(--font-size, var(--font-size-s));
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+  &.dayInactive {
+    opacity: 0.2;
+    cursor: default;
+    pointer-events: none;
+  }
+  &:hover {
+    border-radius: var(--border-radius);
+    border-color: var(--primary-color, var(--primary-green));
+  }
+}
+.selectedDay {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color, var(--primary-green));
+}
+.dayToday {
+  color: var(--white-text);
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color, var(--primary-green));
+}

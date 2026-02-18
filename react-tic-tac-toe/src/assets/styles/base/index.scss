@@ -1,0 +1,24 @@
+@use "sass:math";
+@use "./mixins";
+@use "./variables";
+
+@use "./reset";
+@use "./style";
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--main-background-color02);
+  color: var(--text-color);
+  font-size: 16px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+[class*="__container"] {
+  max-width: var(--containerWidth);
+  padding-inline: var(--containerPadding);
+  margin-inline: auto;
+}

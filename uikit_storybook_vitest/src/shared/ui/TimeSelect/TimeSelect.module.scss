@@ -1,0 +1,75 @@
+.timeSelect {
+  color: var(--text-default);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-size: var(--font-size, var(--font-size-xs));
+  font-weight: var(--font-weight, var(--font-weight-bold));
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  margin-bottom: 7px;
+}
+
+.buttonTimeSelect {
+  font-size: var(--font-size, var(--font-size-m));
+
+  line-height: 1.33333;
+  letter-spacing: -0.3px;
+  margin-bottom: 13px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 88px;
+  min-height: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--text-default);
+  align-items: flex-start;
+}
+
+.timeContent {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-secondary, var(--border-grey-secondary));
+  background-color: var(--main-background);
+  box-shadow: var(--shadow-content, var(--time-shadow));
+  overflow: hidden;
+  max-height: 180px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100%;
+}
+
+.timeContent::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.timeItem {
+  cursor: pointer;
+  width: 100%;
+  font-size: var(--font-size, var(--font-size-m));
+  line-height: 1.33333;
+  letter-spacing: -0.3px;
+  padding: 13px 8px 12px 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 36px;
+  transition: all var(--transition-speed) ease;
+  &:hover {
+    background-color: var(--hovered, var(--hovered-time));
+  }
+}
+.selected {
+  background-color: var(--selected, var(--selection-time));
+}

@@ -1,0 +1,17 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--header-background);
+  padding-block: 22px;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-text);
+  box-shadow: var(--shadow-hover);
+
+  @media screen and (max-width: 576px) {
+    padding-block: 5px;
+  }
+}

@@ -1,0 +1,101 @@
+:root {
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-secondary: 'Roboto', sans-serif;
+  --main-background: #ffffff;
+  --header-background: #171717;
+
+  --primary-green: #00ae1c;
+
+  --border-green: #5ce171;
+  --pressed-green: #0cd52b;
+
+  --secondary-grey: #dedfe5;
+  --border-grey-secondary: #dee0e5;
+
+  --border-grey: #8d8e91;
+  --hover-grey: #efefef;
+  --pressed-grey: #e0e0e0;
+
+  --underline-default: #737373;
+
+  --text-default: #323749;
+
+  --disabled-link: #575d58;
+  --disabled-light: #b9b9b9;
+  --disabled-secondary: #a1a1a1;
+  --disabled-green: #187727;
+  --disabled-grey: #c8c8c8;
+
+  --initial-background: #ffffff;
+
+  --selection-time: #e3e3e3;
+  --hovered-time: #f6f6f6;
+
+  --contact-information-text: #243573;
+
+  --white-text: #ffffff;
+
+  --red-error: #ff5620;
+  --picker-color: #9f2957;
+  --dark-text: #0c0c0c;
+  --card-count: #e9ed08;
+  --text-color: #000;
+
+  --shadow-hover: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  --shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  --secondary-shadow: 0 1px 2px 0 rgba(69, 69, 69, 0.25);
+  --modal-shadow: 0 16px 50px 0 rgba(0, 0, 0, 0.24);
+  --hover-shadow: 0 2px 2px 0 rgba(92, 225, 113, 0.25);
+  --time-shadow: 0 8px 16px 0 rgba(49, 49, 49, 0.1);
+
+  --picker-outline-width: 1px;
+  --picker-size: 12px;
+  --border-radius: 8px;
+  --border-radius-small: 4px;
+
+  --transition-speed: 0.3s;
+
+  --maxWidth: 1440px;
+  --containerCart: 1600px;
+  --containerWidth: 1350px;
+  --containerPadding: 15px;
+
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #17a2b8;
+  --order-small: 465px;
+  --extraSmallDevices: 480px;
+  --smallDevices: 576;
+  --tablets: 768px;
+
+  --btn-size-xs: 25px;
+  --btn-size-s: 43px;
+  --btn-size-m: 63px;
+  --btn-size-l: 83px;
+  --btn-size-xl: 103px;
+
+  --input-size-xs: 100px;
+  --input-size-s: 150px;
+  --input-size-m: 250px;
+  --input-size-l: 300px;
+  --input-size-xl: 350px;
+
+  --modal-width-xs: 320px;
+  --modal-width-s: 488px;
+  --modal-width-m: 560px;
+  --modal-width-l: 640px;
+  --modal-width-xl: 720px;
+
+  --font-size-xs: 10px;
+  --font-size-s: 12px;
+  --font-size-m: 15px;
+  --font-size-l: 20px;
+  --font-size-xl: 24px;
+  --font-size-base: 16px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}

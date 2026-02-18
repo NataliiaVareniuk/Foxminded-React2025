@@ -1,0 +1,49 @@
+.input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fakeInput {
+  position: relative;
+
+  width: var(--picker-size);
+  height: var(--picker-size);
+  border-radius: var(--border-radius-small);
+  &:hover,
+  &:active,
+  &:focus {
+    outline-offset: 1px;
+    outline: var(--picker-outline-width) solid var(--text-default);
+  }
+}
+
+.selected {
+  outline: var(--picker-outline-width) solid var(--text-default);
+  outline-offset: 1px;
+}
+.colorPickerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 230px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--secondary-color, var(--secondary-grey));
+  gap: 24px;
+  padding: 9px;
+}
+.colorPickerHeader {
+  color: var(--text-default);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+.colorPalette {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+}

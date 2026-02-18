@@ -1,0 +1,16 @@
+main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+hr {
+  height: 2px;
+  background-color: var(--border-color-01);
+}
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}

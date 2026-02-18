@@ -1,0 +1,22 @@
+.text {
+  white-space: pre-wrap;
+  overflow: auto;
+  border: none;
+  outline: none;
+  resize: none;
+  pointer-events: none;
+  cursor: none;
+}
+.text::-webkit-scrollbar {
+  display: none;
+}
+.isEdit {
+  cursor: text;
+  pointer-events: initial;
+}
+
+textarea[readonly] {
+  cursor: default;
+  pointer-events: none;
+  text-decoration: line-through;
+}

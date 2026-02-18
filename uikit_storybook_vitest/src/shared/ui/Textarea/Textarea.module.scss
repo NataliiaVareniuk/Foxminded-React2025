@@ -1,0 +1,51 @@
+.textArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7px;
+  max-width: 456px;
+}
+
+.header {
+  color: var(--text-default);
+  font-size: var(--font-size-title, var(--font-size-xs));
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+.text {
+  font-size: var(--font-size-main, var(--font-size-m));
+  line-height: 1.3333;
+  letter-spacing: -0.3px;
+  white-space: pre-wrap;
+  overflow: auto;
+  border: none;
+  outline: none;
+  resize: none;
+  cursor: text;
+  pointer-events: initial;
+  &:not(:disabled):focus,
+  &:not(:disabled):active {
+    color: var(--text-color);
+  }
+  &:not(:disabled):hover {
+    color: var(--text-color);
+    cursor: pointer;
+  }
+}
+.text::-webkit-scrollbar {
+  display: none;
+}
+
+.separator {
+  border-radius: 1px;
+  background: var(--underline, var(--underline-default));
+  height: 1px;
+  margin-top: 6px;
+}
+.disabled {
+  cursor: none;
+  pointer-events: none;
+  background-color: transparent;
+  color: var(--disabled, var(--disabled-secondary));
+}
