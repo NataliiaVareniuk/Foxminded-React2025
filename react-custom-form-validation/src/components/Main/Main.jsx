@@ -14,13 +14,6 @@ function Main() {
   const [isAgree, setIsAgree] = useState(false);
   const [isValidForm, setIsValidForm] = useState(false);
 
-  const formData = {
-    username: username.value,
-    email: email.value,
-    password: password.value,
-    confirm: confirm.value,
-    isAgree,
-  };
 
   useEffect(() => {
     if (
@@ -34,7 +27,7 @@ function Main() {
     } else {
       setIsValidForm(false);
     }
-  }, [username, email, password, confirm]);
+  }, [username, email, password, confirm, isAgree]);
 
   const onChangeCheckbox = useCallback((value) => {
     setIsAgree(value);
