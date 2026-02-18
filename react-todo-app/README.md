@@ -1,10 +1,10 @@
 # React Todo App
 
-Modern, responsive todo application built with React and Vite.
+Responsive todo application built with React and Vite.
 Demonstrates CRUD operations, server state management with React Query, and modular SCSS architecture.
 
 **Live Demo**
-[View the live app](https://.netlify.app/)
+[View the live app](https://react-todo-app-vn.netlify.app/)
 
 ## Key Features
 
@@ -28,12 +28,19 @@ json-server
 
 src/
 ├── components/
+
 ├── pages/
+
 ├── shared/
+
 ├── ui/
+
 ├── App.jsx
+
 ├── main.jsx
+
 db.json
+
 
 ## Local Setup
 
