@@ -1,19 +1,16 @@
 # React Tic-Tac-Toe
-
 A small learning project: the classic Tic-Tac-Toe game implemented with React and Vite.
 
-**Live Demo**
-[View the live app](https://.netlify.app/)
+**Demo**
+[View the live app](https://classic-tic-tac-toe-nv.netlify.app/)
 
 ## Features
-
 - Two-player gameplay (players alternate turns)
 - Winner detection and draw handling
 - Reset game button
 - Responsive UI with modular styling
 
 ## Tech Stack
-
 - React
 - Vite
 - Redux Toolkit
@@ -22,46 +19,24 @@ A small learning project: the classic Tic-Tac-Toe game implemented with React an
 
 ## Quick Start
 
-Requirements: Node.js, npm.
-
-Install dependencies:
-
 ```bash
+# Install dependencies
 npm install
-```
-
-Run development server:
-
-```bash
+# Run development server
 npm run dev
-```
-
-Build for production:
-
-```bash
+# Build production files
 npm run build
-```
-
-Preview the production build locally:
-
-```bash
+# Preview production build
 npm run preview
-```
-
-Run ESLint:
-
-```bash
-npm run lint
-```
-
 ## Project Structure (high level)
 
+## Project Structure
 src/
-├── components/ # UI components used in the game
-├── blocks/ # Blocks of the game UI
-├── store/ # Redux store and gameSlice.js
-├── ui/ # Shared UI elements (buttons, messages)
-├── assets/ # Images and SCSS structure
+├── components/
+├── blocks/
+├── store/
+├── ui/
+├── assets/
 
 ## Contributing
 
