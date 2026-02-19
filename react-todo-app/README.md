@@ -3,7 +3,7 @@
 Responsive todo application built with React and Vite.
 Demonstrates CRUD operations, server state management with React Query, and modular SCSS architecture.
 
-**Live Demo**
+**Demo**
 [View the live app](https://react-todo-app-vn.netlify.app/)
 
 ## Key Features
