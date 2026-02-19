@@ -2,7 +2,7 @@
 
 A compact, component-driven e-commerce demo application built with React and Vite. Designed as a portfolio project to demonstrate state management, custom hooks, modular styling, and checkout flow architecture.
 
-**Live Demo**
+**Demo**
 [View the live app](https://react-ecommerce-demo-nv.netlify.app/)
 
 **Overview**
