@@ -12,7 +12,7 @@ A collection of small React projects focused on practical front-end development 
   [View Live App](https://projectsreactuikit.netlify.app/)  
   [View Storybook](https://reactstorybook.netlify.app)
 
-  **Projects Demo JavaScript/CSS **
+  **Projects Demo JavaScript/CSS**
  -  **Weather Widget**  [View the live app](https://weatherwidgetsimpljs.netlify.app/)
  -  **Online Store**    [View the live app](https://onlinestoresimple.netlify.app/)
  -  **To-Do List**      [View the live app](https://simpletodojs.netlify.app/)
