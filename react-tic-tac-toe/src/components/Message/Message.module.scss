@@ -63,10 +63,16 @@
   border: 1px solid var(--border-color-03);
   gap: 16px;
   background: var(--background-color);
+  @media (max-width: 769px) {
+    padding: 12px 8px;
+  }
 }
 .messageField {
   padding: 29px 20px;
   border: 1px solid var(--border-color-01);
+  @media (max-width: 441px) {
+    padding: 19px 10px;
+  }
 }
 .messages {
   min-height: 325px;
@@ -79,16 +85,23 @@
     display: none;
   }
   scroll-behavior: smooth;
+  @media (max-width: 769px) {
+    min-height: 125px;
+    max-height: 125px;
+  }
 }
 .messageItems {
   display: flex;
   gap: 24px;
-  overflow: scroll;
+  // overflow: scroll;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   &::-webkit-scrollbar {
     display: none;
+  }
+  @media (max-width: 769px) {
+    gap: 12px;
   }
 }
 .sendButton {
@@ -121,6 +134,11 @@
   overflow-wrap: break-word;
   &:last-child {
     margin-bottom: 24px;
+  }
+  @media (max-width: 769px) {
+    &:last-child {
+      margin-bottom: 12px;
+    }
   }
 }
 .messageItemMy {

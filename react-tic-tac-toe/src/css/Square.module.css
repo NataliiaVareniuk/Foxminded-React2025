@@ -1,0 +1,26 @@
+.square, .squareO, .squareX {
+  width: var(--square-size);
+  height: var(--square-size);
+  background: var(--background-message-field);
+  border: 1px solid var(--border-color-02);
+}
+.square:first-child, .squareO:first-child, .squareX:first-child, .square:nth-child(2), .squareO:nth-child(2), .squareX:nth-child(2), .square:nth-child(3), .squareO:nth-child(3), .squareX:nth-child(3) {
+  border-top: none;
+}
+.square:nth-child(3n+1), .squareO:nth-child(3n+1), .squareX:nth-child(3n+1) {
+  border-left: none;
+}
+.square:nth-child(3n+3), .squareO:nth-child(3n+3), .squareX:nth-child(3n+3) {
+  border-right: none;
+}
+.square:nth-child(7), .squareO:nth-child(7), .squareX:nth-child(7), .square:nth-child(8), .squareO:nth-child(8), .squareX:nth-child(8), .square:last-child, .squareO:last-child, .squareX:last-child {
+  border-bottom: none;
+}
+
+.squareX {
+  background: url("../../assets/images/x.svg") center/70px no-repeat;
+}
+
+.squareO {
+  background: url("../../assets/images/o.svg") center/70px no-repeat;
+}
