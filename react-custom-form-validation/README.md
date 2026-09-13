@@ -1,43 +1,57 @@
 **React Custom Form Validation**
-A compact React project demonstrating custom form validation patterns using controlled and uncontrolled inputs, custom hooks, and SCSS modules.
-**Demo**
-[View the live app](https://react-custom-form-validation-nv.netlify.app/)
 
-## Features
-- Controlled & uncontrolled form inputs
-- Custom validation hooks (`useInput`, `useValidation`)
-- Reusable form UI components (`Input`, `Button`, `Checkbox`)
-- Responsive styling with SCSS modules
+An example of custom form validation in React implemented without external form libraries.
 
-## Tech Stack
-- React (functional components, hooks)
-- Create React App (CRA)
-- react-hook-form (light usage)
-- Sass (SCSS modules)
-- JavaScript (ES6+)
+**Live Demo**
+[View the live app](https://.netlify.app/)
 
-## Quick Start
-```bash
-# Clone repo
-git clone <your-repo-url>
-cd react-custom-form-validation
+**Description**
+
+This project demonstrates how to validate form fields such as email, password, and confirm password using custom logic with React hooks and JavaScript.
+No external form libraries like react-hook-form, yup, or zod are used.
+
+**Technologies**
+
+React 19.x
+JavaScript (ES6+)
+SCSS
+
+**Features**
+Required field validation
+Email format validation
+Password length validation
+Password match (confirm password)
+Real-time error display
+Submit button disabled until the form is valid
+
+**Vite or Create React App**
+Getting Started
+
+**Clone the repository:**
+git clone https://github.com/NataliiaVareniuk/Foxminded-React2026
+
+**Navigate to the project folder:**
+cd Foxminded-React2026/react-custom-form-validation
 
 # Install dependencies
+
 npm install
+
 # Run development server
+
 npm start
+
 # Build for production
+
 npm run build
 
 **Project Structure**
 src/
-├── components/     # Reusable UI components
-├── ui/             # Buttons, Inputs, Checkboxes
-├── Main/           # Demo pages
-├── utils/          # Custom hooks (useInput, useValidation)
-├── assets/         # Images, SCSS globals
+├── components/ # Form components
+├── hooks/ # Custom hooks for validation
+├── styles/ # CSS / SCSS
+├── utils/ # Utility functions
+└── App.jsx
 
 **License**
 Educational project, free to use and modify.
-```
-

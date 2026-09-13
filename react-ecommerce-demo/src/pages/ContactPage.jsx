@@ -5,7 +5,7 @@ import ContactForm from "@/components/Contact/ContactForm";
 import Breadcrumbs from "@/layouts/Breadcrumbs";
 
 function ContactPage() {
-   const location = useLocation();
+  const location = useLocation();
   const isRootCart = location.pathname === "/cart/contact";
   return (
     <>
