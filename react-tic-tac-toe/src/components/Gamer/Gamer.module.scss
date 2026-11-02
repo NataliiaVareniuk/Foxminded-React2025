@@ -10,10 +10,10 @@
 .boardGameContainer {
   width: 300px;
   height: 300px;
-  background: var(--background-message-field);
-  border-radius: var(--border-radius);
-  padding: 15px;
-  border: 1px solid var(--border-color-01);
+  background: var(--color-surface-message);
+  border-radius: var(--radius-default);
+  padding: 13px;
+  border: 1px solid var(--color-border-primary);
   position: relative;
 }
 .gamerIsActive {
@@ -23,6 +23,6 @@
   position: absolute;
   width: 100%;
   height: 6px;
-  border-radius: var(--border-radius);
-  background: var(--text-color);
+  border-radius: var(--radius-default);
+  background: var(--color-text);
 }

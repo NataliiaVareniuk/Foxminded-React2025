@@ -1,21 +1,21 @@
 .container {
   max-width: 640px;
   width: 100%;
-  background-color: var(--background-message-field);
-  //  border: 1px solid var(--border-color-01);
+  background-color: var(--color-surface-message);
+  //  border: 1px solid var(--color-border-primary);
 
   margin-inline: 41px;
   flex-shrink: 0;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: var(--radius-default) var(--radius-default) 0 0;
 }
 
 .headerX {
   text-align: center;
   font-weight: 400;
   letter-spacing: -0.3px;
-  background-color: var(--main-background-color);
-  border: 1px solid var(--border-color-01);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  background-color: var(--color-background-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-default) var(--radius-default) 0 0;
 
   width: 100%;
   padding-block: 9px 8px;
@@ -29,8 +29,8 @@
     height: 32px;
     margin-inline: 8px;
 
-    background: var(--border-color-01) url("../../assets/images/x.svg") center /
-      16px no-repeat;
+    background: var(--color-border-primary) url("../../assets/images/x.svg")
+      center / 16px no-repeat;
 
     border-radius: 50%;
   }
@@ -38,8 +38,8 @@
 .headerO {
   @extend .headerX;
   &::before {
-    background: var(--border-color-01) url("../../assets/images/o.svg") center /
-      16px no-repeat;
+    background: var(--color-border-primary) url("../../assets/images/o.svg")
+      center / 16px no-repeat;
   }
 }
 .inputMessage {
@@ -48,7 +48,7 @@
   outline: none;
 
   &::placeholder {
-    color: var(--text-color);
+    color: var(--color-text);
     font-size: 16px;
     vertical-align: center;
   }
@@ -59,24 +59,25 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 18px 16px;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color-03);
+  border-radius: var(--radius-default);
+  border: 1px solid var(--color-border-tertiary);
   gap: 16px;
-  background: var(--background-color);
+
+  background: var(--color-surface);
   @media (max-width: 769px) {
     padding: 12px 8px;
   }
 }
 .messageField {
-  padding: 29px 20px;
-  border: 1px solid var(--border-color-01);
+  padding: 12px 20px;
+  border: 1px solid var(--color-border-primary);
   @media (max-width: 441px) {
     padding: 19px 10px;
   }
 }
 .messages {
-  min-height: 325px;
-  max-height: 325px;
+  //  min-height: 325px;
+  max-height: 135px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -92,7 +93,7 @@
 }
 .messageItems {
   display: flex;
-  gap: 24px;
+  gap: 15px;
   // overflow: scroll;
   flex-direction: column;
   justify-content: space-between;
@@ -114,8 +115,8 @@
 
   &:hover {
     border-radius: 50%;
-    background-color: var(--background-message-opponent);
-    box-shadow: 0px 0px 0px 7px var(--background-message-opponent);
+    background-color: var(--color-message-opponent);
+    box-shadow: 0px 0px 0px 7px var(--color-message-opponent);
   }
 }
 
@@ -126,14 +127,14 @@
   text-align: left;
   padding: 4px 12px;
 
-  background-color: var(--background-message-opponent);
+  background-color: var(--color-message-opponent);
 
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-default);
   max-width: 80%;
   word-break: break-word;
   overflow-wrap: break-word;
   &:last-child {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
   @media (max-width: 769px) {
     &:last-child {
@@ -146,7 +147,7 @@
 
   align-self: self-end;
 
-  background-color: var(--background-message);
+  background-color: var(--color-message-own);
 }
 .time {
   font-size: 12px;

@@ -23,7 +23,7 @@ function Gamer({ isActive }) {
             className={css.winLine}
             style={{
               transform: `rotate(${rotateDeg}deg)`,
-              left: `calc(${left} * var(--square-size) )`, 
+              left: `calc(${left} * var(--size-square) )`,
               top: `${top}%`, 
             }}
           ></div>

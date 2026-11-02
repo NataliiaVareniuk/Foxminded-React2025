@@ -7,9 +7,9 @@
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
-  border-radius: var(--border-radius);
-  background-color: var(--background-message);
-  box-shadow: var(--shadow);
+  border-radius: var(--radius-default);
+  background-color: var(--color-message-own);
+  box-shadow: var(--shadow-sm);
 
   text-align: center;
   font-size: 15px;

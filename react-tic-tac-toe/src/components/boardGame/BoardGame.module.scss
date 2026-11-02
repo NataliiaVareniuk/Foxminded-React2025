@@ -1,9 +1,9 @@
 .titlePlayer {
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   letter-spacing: -0.3px;
-  color: var(--orange-title);
+  color: var(--color-title);
 
   @media (max-width: 541px) {
     font-size: 22px;
@@ -11,7 +11,7 @@
 }
 
 .winner {
-  color: var(--background-message);
+  color: var(--color-message-own);
   text-align: center;
   font-size: 32px;
   font-weight: 500;
@@ -23,24 +23,24 @@
 
 .looser {
   @extend .winner;
-  color: var(--lost-color);
+  color: var(--color-game-lost);
 }
 .player {
-  padding-top: 37px;
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
 
   justify-content: space-between;
   flex-basis: 50%;
   align-items: center;
-  gap: 38px;
+  gap: 20px;
   padding-inline: 41px;
   &:first-child {
-    border-right: 2px solid var(--border-color-01);
+    border-right: 2px solid var(--color-border-primary);
     @media (max-width: 712px) {
       padding: 15px;
       gap: 20px;
-      border-bottom: 2px solid var(--border-color-01);
+      border-bottom: 2px solid var(--color-border-primary);
     }
   }
 
@@ -62,5 +62,5 @@
 }
 .draw {
   @extend .winner;
-  color: var(--orange-title);
+  color: var(--color-title);
 }
