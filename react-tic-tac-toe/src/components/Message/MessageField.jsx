@@ -17,11 +17,14 @@ function MessageField({ num, isActive }) {
   }, []);
 
   useLayoutEffect(() => {
-    requestAnimationFrame(() => {
-      if (messagesEndRef.current) {
-        messagesEndRef.current.scrollTop = messagesEndRef.current.scrollHeight;
-      }
+    const messagesContainer = messagesEndRef.current;
+    if (!messagesContainer) return;
+
+    const frame = requestAnimationFrame(() => {
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
     });
+
+    return () => cancelAnimationFrame(frame);
   }, [messages]);
 
   const handleInput = (e) => {
