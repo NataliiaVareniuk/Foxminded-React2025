@@ -3,6 +3,8 @@ import Input from "../../ui/Input/Input";
 import css from "./Main.module.scss";
 import Checkbox from "../../ui/Checkbox/Checkbox";
 import { useState, useCallback, useEffect } from "react";
+import Toast from "../../ui/Toast/Toast";
+
 
 function Main() {
   const [username, setUsername] = useState({ value: "", isValid: false });
@@ -10,10 +12,9 @@ function Main() {
   const [email, setEmail] = useState({ value: "", isValid: false });
   const [password, setPassword] = useState({ value: "", isValid: false });
   const [confirm, setConfirm] = useState({ value: "", isValid: false });
-
+ const [showToast, setShowToast] = useState(false);
   const [isAgree, setIsAgree] = useState(false);
   const [isValidForm, setIsValidForm] = useState(false);
-
 
   useEffect(() => {
     if (
@@ -38,9 +39,19 @@ function Main() {
     isValidForm,
   };
 
-    const formSubmit = async (e) => {
+  const formSubmit = async (e) => {
     e.preventDefault();
-    alert("Form successfully submitted!");
+    const isFormValid =
+      username.isValid &&
+      email.isValid &&
+      password.isValid &&
+      confirm.isValid &&
+      isAgree;
+    if (!isFormValid) {
+      alert("Please fill in all required fields correctly.");
+      return;
+    }
+    setShowToast(true);
     onChangeCheckbox(false);
     setIsClear(true);
   };
@@ -50,10 +61,17 @@ function Main() {
       setIsClear(false);
     }
   }, [isClear]);
+
   const handleUsername = useCallback((data) => setUsername(data), []);
-  const handleEmail = useCallback((data) => {setEmail(data);}, [])
-  const handlePassword = useCallback((data) => {setPassword(data);}, [])
-  const handleConfirm = useCallback((data) => {setConfirm(data);}, [])
+  const handleEmail = useCallback((data) => {
+    setEmail(data);
+  }, []);
+  const handlePassword = useCallback((data) => {
+    setPassword(data);
+  }, []);
+  const handleConfirm = useCallback((data) => {
+    setConfirm(data);
+  }, []);
 
   return (
     <>
@@ -94,6 +112,12 @@ function Main() {
         <Checkbox isAgreeMain={isAgree} onChange={onChangeCheckbox} />
         <Button data={validData} />
         <p className={css.info}>*Required field</p>
+        <Toast
+                    message="Form successfully checked!"
+                    duration={3000}
+                    onClose={() => setShowToast(false)}
+                    isOpen={showToast}
+                  />
       </form>
     </>
   );

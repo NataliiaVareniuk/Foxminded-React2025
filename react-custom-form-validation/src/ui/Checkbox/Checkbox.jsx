@@ -5,7 +5,6 @@ function Checkbox({ isAgreeMain, onChange }) {
     const onChangeCheckbox = useCallback(
     (e) => {
       const checked = e.target.checked;
-      
       if (onChange) {
         onChange(checked);
       }

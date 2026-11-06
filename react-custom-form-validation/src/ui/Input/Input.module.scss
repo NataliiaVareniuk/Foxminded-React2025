@@ -1,17 +1,17 @@
 .divider {
   width: 300px;
   height: 1px;
-  background-color: var(--default_color);
+  background-color: var(--color-muted);
 }
 .dividerError {
-  background-color: var(--red-orange);
+  background-color: var(--color-error);
 }
 .dividerActive {
-  background-color: var(--white);
+  background-color: var(--color-white);
 }
 
 .label {
-  color: var(--white);
+  color: var(--color-white);
   font-size: 10px;
   font-weight: 700;
   line-height: 1.2;
@@ -26,7 +26,7 @@
 }
 
 .inputClass {
-  color: var(--white);
+  color: var(--color-white);
   font-size: 15px;
   font-weight: 400;
   line-height: 1.3333;
@@ -37,7 +37,7 @@
   opacity: 0.8;
 
   &::placeholder {
-    color: var(--white);
+    color: var(--color-white);
     opacity: 0.8;
     &:active,
     &:focus {
@@ -51,7 +51,7 @@
   }
 }
 .error {
-  color: var(--red-orange);
+  color: var(--color-error);
   font-size: 10px;
   font-weight: 400;
   line-height: 1.2;

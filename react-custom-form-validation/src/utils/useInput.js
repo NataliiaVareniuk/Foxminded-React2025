@@ -13,7 +13,7 @@ export function useInput(initialValue, name, onChange, comparing, isClear) {
   );
 
   const handleChange = (event) => {
-    const newValue = event.target.value.trim();
+    const newValue = event.target.value;
     setValue(newValue);
   };
 

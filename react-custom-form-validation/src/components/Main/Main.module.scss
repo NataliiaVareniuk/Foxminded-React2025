@@ -1,12 +1,18 @@
 .form {
-  max-width: var(--container);
-  padding: var(--padding-block) var(--padding-inline);
+  position: relative;
+  max-width: var(--container-width);
+  padding: var(--container-padding-block) var(--container-padding-inline);
   margin: 0 auto;
-  background-color: var(--background_color);
+  background-color: var(--color-background);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   row-gap: 18px;
+
+  @media (max-width: 738px) {
+    width: 100%;
+    padding: 20px;
+  }
 }
 .info {
   color: rgba(255, 255, 255, 0.8);

@@ -2,6 +2,8 @@ import css from "./Input.module.scss";
 import { useMemo, useState, useCallback } from "react";
 import classNames from "classnames";
 
+import { fieldValidation } from "../../utils/fieldValidation";
+
 function InputUncontrolled({
   label_text,
   placeholder,
@@ -12,6 +14,16 @@ function InputUncontrolled({
   onBlurValid
 }) {
   const [isDisplay, setIsDisplay] = useState(false);
+  
+  const validationOnBlur = (field, ref) => {
+  const value = ref.current?.value || "";
+  const { error, isValid } = fieldValidation(value, field, comparing?.current?.value);
+   setFieldValid((prev) => ({
+    ...prev,
+    [name]: { error, isValid },
+    }));
+   onBlurValid({isValid});
+  }
 
   const [activeUser, setActiveUser] = useState({
     username: false,
@@ -40,36 +52,24 @@ function InputUncontrolled({
   
   };
 
-   const [fieldValid, setFieldValid] = useState({
-    name: {error: "", isValid: true },
+  const [fieldValid, setFieldValid] = useState({
+    [name]: {error: "", isValid: true },
    });
 
- const validationOnBlur = (field, ref) => {
-  const value = ref.current?.value || "";
-  
-  const { error, isValid } = fieldValid(value, field, comparing?.current.value);
-
- setFieldValid((prev) => ({
-    ...prev,
-    [name]: { error, isValid },
-  }));
-   onBlurValid({isValid});
+ 
    
- }
-   
-const buttonViewClass = classNames({
+ const buttonViewClass = classNames({
     [css.password]: type === "password" && !isDisplay,
     [css.passwordOpen]: type === "password" && isDisplay,
-});
+ });
 
-  const inputType = useMemo(
+ const inputType = useMemo(
     () => (type === "password" && isDisplay ? "text" : type),
     [type, isDisplay]
-  );
+ );
 
-  const Divider = ({ active, name }) => {
-    const field = fieldValid[name];
-
+ const Divider = ({ active, name }) => {
+  const field = fieldValid[name];
   const isValid = field?.isValid ?? true;
   const hasError = field?.error ?? "";
   return(
@@ -90,11 +90,12 @@ const buttonViewClass = classNames({
       </label>
       <div className={css.passwordContainer}>
         <input
+          id={name}
+          ref={ref}
           name={name}
           type={inputType}
           className={css.inputClass}
           placeholder={placeholder}
-          ref={ref}
           autoComplete="off"
           onFocus={() => handleFocus(name)}
           onBlur={() => handleBlur(name, ref)}

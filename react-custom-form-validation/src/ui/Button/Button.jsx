@@ -12,7 +12,7 @@ const Button = memo(({data}) => {
  })
   return (
    <button    className={buttonSubmit} type='submit'>
-     Register
+        Register
     </button>
   );
 
