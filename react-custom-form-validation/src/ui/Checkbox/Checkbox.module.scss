@@ -2,6 +2,7 @@
   cursor: pointer;
   width: 0px;
   height: 0px;
+  margin-top: 10px;
   position: relative;
 
   &::before {
@@ -11,8 +12,12 @@
     border: 2px solid var(--color-white);
     border-radius: 2px;
     position: absolute;
+
     top: 0px;
     left: 0px;
+    @media (max-width: 738px) {
+      top: -8px;
+    }
   }
   &::after {
     content: "";
@@ -25,6 +30,9 @@
     top: 0px;
     left: 0px;
     display: none;
+    @media (max-width: 738px) {
+      top: -8px;
+    }
   }
   &:checked {
     &::after {
@@ -47,7 +55,13 @@
   justify-content: flex-start;
   flex-direction: row;
   gap: 22px;
+
+  @media (max-width: 738px) {
+    font-size: 16px;
+    gap: 32px;
+    margin-top: 22px;
+  }
 }
 .checkbox {
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 }

@@ -17,6 +17,11 @@
   line-height: 1.2;
   letter-spacing: -0.2px;
   margin-bottom: 7px;
+
+  @media (max-width: 738px) {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
 }
 .container {
   font-family: "Inter", sans-serif;
@@ -35,6 +40,11 @@
   text-align: left;
   outline: none;
   opacity: 0.8;
+  @media (max-width: 738px) {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 7px;
+  }
 
   &::placeholder {
     color: var(--color-white);
@@ -59,11 +69,19 @@
   position: absolute;
   top: 2px;
   left: 0px;
+  @media (max-width: 738px) {
+    font-size: 14px;
+    top: 6px;
+  }
 }
 .password {
   width: 16px;
   height: 16px;
-  background: url("../../assets/images/notView.svg") center / 16px no-repeat;
+  background: url("../../assets/images/notView.svg") center / 24px no-repeat;
+  @media (max-width: 738px) {
+    width: 24px;
+    height: 24px;
+  }
 }
 .passwordContainer {
   display: flex;
@@ -72,5 +90,9 @@
 .passwordOpen {
   width: 16px;
   height: 16px;
-  background: url("../../assets/images/view.svg") center / 16px no-repeat;
+  background: url("../../assets/images/view.svg") center / 24px no-repeat;
+  @media (max-width: 738px) {
+    width: 24px;
+    height: 24px;
+  }
 }
